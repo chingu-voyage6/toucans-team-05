@@ -3,19 +3,109 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+<style>
+
+.hidden {
+  display: none;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+function toggler(divId) {
+    $("#" + divId).toggle();
+}
+
+</script>
+
   </head>
   <body>
 
 <div id="dietHealth">
+
+  <a href="#" onclick="toggler('atkins');">Atkin diet</a>
+  <a href="#" onclick="toggler('ketogenic');">Ketogenic diet</a>
+  <a href="#" onclick="toggler('ketogenic');">Mediterranean diet</a>
+  <a href="#" onclick="toggler('ketogenic');">Scandinavian diet</a>
+  <a href="#" onclick="toggler('ketogenic');">Vegan diet</a>
+
 <div id="dietInfo">
+  <div id="atkins" class="hidden">
+    <p>Atkins diet info</p>
+
+  <div id="nutrients">
+    <p>Atkins nutrient intake</p>
+
+
+    <p>Atkins nutrients shortage.</p>
+
+
+  </div>
+
+  </div>
+
+<div id="ketogenic" class="hidden">
+
+  <p>Ketogenic diet info</p>
+
+  <div id="nutrients">
+  <p>Ketogenic nutrient intake</p>
+
+
+  <p>Ketogenic nutrients shortage.</p>
+
+  </div>
+
+
+
+</div>
+
+<div id="mediterranean" class="hidden">
+
+  <p>Mediterranean diet info</p>
+
+  <div id="nutrients">
+  <p>Mediterranean nutrient intake</p>
+
+
+  <p>Mediterranean nutrients shortage.</p>
+  </div>
+
+</div>
+
+<div id="scandinavian" class="hidden">
+
+  <p>Scandinavian diet info</p>
+
+  <div id="nutrients">
+  <p>Scandinavian nutrient intake</p>
+
+
+  <p>Scandinavian nutrients shortage.</p>
+  </div>
+
 
 
 
 
 </div>
-<div id="bodyImages">
+
+<div id="vegan" class="hidden">
+
+  <p>Vegan diet info</p>
+
+  <div id="nutrients">
+  <p>Vegan nutrient intake</p>
 
 
+  <p>Vegan nutrients shortage.</p>
+  </div>
+
+</div>
 
 
 </div>
@@ -23,9 +113,6 @@
 
 
 </div>
-
-
-
 
 
 
