@@ -16,9 +16,12 @@
 
 <script>
 
-function toggler(divId) {
+function display_toggle(divId) {
     $("#" + divId).toggle();
 }
+
+
+
 
 </script>
 
@@ -27,11 +30,11 @@ function toggler(divId) {
 
 <div id="dietHealth">
 
-  <a href="#" onclick="toggler('atkins');">Atkin diet</a>
-  <a href="#" onclick="toggler('ketogenic');">Ketogenic diet</a>
-  <a href="#" onclick="toggler('mediterranean');">Mediterranean diet</a>
-  <a href="#" onclick="toggler('scandinavian');">Scandinavian diet</a>
-  <a href="#" onclick="toggler('vegan');">Vegan diet</a>
+  <a href="#" onclick="display_toggle('atkins'); ">Atkin diet</a>
+  <a href="#" onclick="display_toggle('ketogenic');">Ketogenic diet</a>
+  <a href="#" onclick="display_toggle('mediterranean');">Mediterranean diet</a>
+  <a href="#" onclick="display_toggle('scandinavian');">Scandinavian diet</a>
+  <a href="#" onclick="display_toggle('vegan');">Vegan diet</a>
 
 <div id="dietInfo">
   <div id="atkins" class="hidden">
