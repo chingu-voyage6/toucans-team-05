@@ -10,6 +10,11 @@
   display: none;
 }
 
+
+
+
+
+
 </style>
 
 
@@ -20,10 +25,10 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 <script>
 
 var divs = ["atkins", "ketogenic", "mediterranean", "scandinavian", "vegan"];
-var visibleDivId = null;
+var visibleDivId;
 function toggle_display(divId){
   if(visibleDivId === divId){
-  //visibleDivId = null;
+  visibleDivId = null;
 } else{
   visibleDivId = divId;
 }
@@ -81,10 +86,21 @@ for(i = 0; i < divs.length; i++){
 <div id="ketogenic" class="hidden">
 
   <p>Ketogenic diet info</p>
+<ul>
+<li>Founded in 1924 by Dr. Russell Wilder.</li>
+<li>Based on eating a specific percentage of macronutrients.</li>
+
+
+</ul>
 
 
   <div id="nutrients">
   <p>Ketogenic nutrient intake</p>
+  <ul>
+    <li>Fats 70-80% of daily calories</li>
+    <li>Proteins 20-25%</li>
+    <li>Carbohydrates 5-10%</li>
+  </ul>
 
 
   <p>Ketogenic nutrients shortage.</p>
