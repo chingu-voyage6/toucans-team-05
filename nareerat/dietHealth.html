@@ -12,13 +12,40 @@
 
 </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+-->
 
 <script>
 
-function display_toggle(divId) {
-    $("#" + divId).toggle();
+var divs = ["atkins", "ketogenic", "mediterranean", "scandinavian", "vegan"];
+var visibleDivId = null;
+function toggle_display(divId){
+  if(visibleDivId === divId){
+  //visibleDivId = null;
+} else{
+  visibleDivId = divId;
 }
+hideNonVisibleDivs();
+}
+
+function hideNonVisibleDivs(){
+  var i, divId, div;
+for(i = 0; i < divs.length; i++){
+  divId = divs[i];
+  div = document.getElementById(divId);
+  if(visibleDivId === divId){
+    div.style.display = "block";
+  }else{
+    div.style.display = "none";
+  }
+  }
+
+}
+
+
+
 
 
 
@@ -30,11 +57,11 @@ function display_toggle(divId) {
 
 <div id="dietHealth">
 
-  <a href="#" onclick="display_toggle('atkins'); ">Atkin diet</a>
-  <a href="#" onclick="display_toggle('ketogenic');">Ketogenic diet</a>
-  <a href="#" onclick="display_toggle('mediterranean');">Mediterranean diet</a>
-  <a href="#" onclick="display_toggle('scandinavian');">Scandinavian diet</a>
-  <a href="#" onclick="display_toggle('vegan');">Vegan diet</a>
+  <a href="#" onclick="toggle_display('atkins'); ">Atkin diet</a>
+  <a href="#" onclick="toggle_display('ketogenic');">Ketogenic diet</a>
+  <a href="#" onclick="toggle_display('mediterranean');">Mediterranean diet</a>
+  <a href="#" onclick="toggle_display('scandinavian');">Scandinavian diet</a>
+  <a href="#" onclick="toggle_display('vegan');">Vegan diet</a>
 
 <div id="dietInfo">
   <div id="atkins" class="hidden">
