@@ -1,63 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
+
     <meta charset="utf-8">
+
+    <meta name="viewport" content
+
     <title></title>
-
-<style>
-
-.hidden {
-  display: none;
-}
-
-
-
-
-
-
-</style>
-
 
 <!--
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 -->
 
-<script>
+<link rel="stylesheet" type="text/css" href="dhstyle.css">
 
-var divs = ["atkins", "ketogenic", "mediterranean", "scandinavian", "vegan"];
-var visibleDivId;
-function toggle_display(divId){
-  if(visibleDivId === divId){
-  visibleDivId = null;
-} else{
-  visibleDivId = divId;
-}
-hideNonVisibleDivs();
-}
-
-function hideNonVisibleDivs(){
-  var i, divId, div;
-for(i = 0; i < divs.length; i++){
-  divId = divs[i];
-  div = document.getElementById(divId);
-  if(visibleDivId === divId){
-    div.style.display = "block";
-  }else{
-    div.style.display = "none";
-  }
-  }
-
-}
-
-
-
-
-
-
-
-</script>
+<script src="dhscript.js"></script>
 
   </head>
+
   <body>
 
 <div id="dietHealth">
